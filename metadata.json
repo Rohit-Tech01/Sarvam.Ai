@@ -1,0 +1,8 @@
+{
+  "name": "Sarvam.ai - Student Smart Money Manager",
+  "description": "A comprehensive student financial wellness platform inspired by Indian values of Arth-Sanyam. Features tracking, budgeting, goal planning, and AI-driven financial advice with a soft pastel healthcare aesthetic.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
