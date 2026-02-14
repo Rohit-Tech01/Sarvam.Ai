@@ -1,26 +1,146 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sarvam.ai – Smart Money Manager</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarvam.ai - Student Money Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FDFCFD;
+            color: #333333;
+        }
+        .pastel-pink { background-color: #F8BBD0; }
+        .pastel-green { background-color: #C8E6C9; }
+        .pastel-lavender { background-color: #E1BEE7; }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* --- Global Input & Form Element Styling (Fix for Visibility) --- */
+        input,
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="email"],
+        input[type="search"],
+        input[type="date"],
+        textarea,
+        select {
+            background-color: #FFFFFF !important;
+            color: #333333 !important;
+            border: 1px solid #F8BBD0 !important;
+            border-radius: 14px !important;
+            padding: 12px 16px !important;
+            font-size: 15px !important;
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 400 !important;
+            outline: none !important;
+            caret-color: #F48FB1 !important;
+            transition: all 0.2s ease-in-out !important;
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            /* Remove default browser styles */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        /* Specifically target numbers to ensure visibility */
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Placeholder Styling */
+        ::placeholder {
+            color: #999999 !important;
+            opacity: 1 !important; /* Firefox */
+        }
+
+        :-ms-input-placeholder {
+            color: #999999 !important;
+        }
+
+        ::-ms-input-placeholder {
+            color: #999999 !important;
+        }
+
+        /* Focus State with subtle pink glow */
+        input:focus, 
+        textarea:focus, 
+        select:focus {
+            border-color: #F48FB1 !important;
+            background-color: #FFF5F8 !important;
+            box-shadow: 0 0 0 3px rgba(244, 143, 177, 0.2) !important;
+            outline: none !important;
+        }
+
+        /* Chrome Autofill fix (Yellow removal) */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+            -webkit-text-fill-color: #333333 !important;
+            transition: background-color 5000s ease-in-out 0s !important;
+        }
+
+        /* Dark inheritance removal */
+        * {
+            scrollbar-color: #F8BBD0 #f1f1f1;
+            scrollbar-width: thin;
+        }
+
+        /* Custom scrollbar for textareas and chat */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #F8BBD0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #F48FB1;
+        }
+
+        /* Extra fix for mobile tap highlight */
+        input, textarea, button, select {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
 <body>
-
-<nav>
-    <h2>🌸 Sarvam.ai</h2>
-    <a href="dashboard.html">Dashboard</a>
-</nav>
-
-<section class="hero">
-    <h1>Smart Money Manager</h1>
-    <p>Track. Save. Grow. Inspired by Indian financial discipline.</p>
-    <a href="dashboard.html" class="btn">Get Started</a>
-</section>
-
-<footer>
-    <p>© 2026 Sarvam.ai | Made for Financial Inclusion 🇮🇳</p>
-</footer>
-
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>
